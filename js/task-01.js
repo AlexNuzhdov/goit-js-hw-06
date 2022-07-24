@@ -1,12 +1,8 @@
-const totalCategories = document.querySelectorAll(".item "); /* ссылка на все  item */
 
-console.log(`Number of categories:  ${totalCategories.length}`); /*находим количество элементов*/
+const categoriesItem = document.querySelectorAll('.item');
+console.log(`Number of categories: ${categoriesItem.length}`)
 
-const newArray = [...totalCategories] /* создает новый массив*/
-
-  .map(categories => `Category: ${categories.children[0].textContent}
-  Elements: ${categories.children[1].children.length}`
-  )
-  .join("\n "); /* переносит на новую строку*/
-  
-console.log(newArray);
+categoriesItem.forEach(item => {
+    console.log(`Category: ${item.firstElementChild.textContent}`);
+    console.log(`Elements: ${item.lastElementChild.children.length}`)
+});

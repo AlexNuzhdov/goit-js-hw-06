@@ -2,9 +2,8 @@
   const inputRange = document.querySelector("#font-size-control") /*ccылка на инпут*/
   const inputText = document.querySelector("#text")
 
-
-  const InputEl = () => {
+  const inputEl = () => {
   inputText.style.fontSize = `${inputRange.value}px`;
 };
 
-  inputRange.addEventListener("input", InputEl);
+  inputRange.addEventListener("input", inputEl);
